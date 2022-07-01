@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✂️ The Shortest URL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  </head>
+  <body>
+    <main>
+      <div class="container mt-5">
+        <div class="header"> <h3>URL Shortener:</h3></div>
+        <form class="form " id="form">
+          <div  class="form-group w-75">
+          <input
+            type="text"
+            name="URL"
+            id="URL"
+            value=""
+            placeholder="Paste here your link to be shortened"
+            class="mt-2 mb-2 form-control"
+          />
+        </div>
+          <div class="error"></div>
+          <button type="submit" class="btn btn-primary">shorten this!</button>
+        </form>
+        <div class="link-wrapper mt-2 mb-2">
+          <h5 class="link-text">Your short link:</h5>
+        </div>
+        <div class="short-link mb-5"></div>
+        <hr>
+
+        <div class="header"> <h6>For this POST request to the endpoint /encode :</h6></div>
+
+        <div class="table-responsive">
+          <table class="table table-hover table-sm table-dark ">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Response status</th>
+                <th scope="col">Response message</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>200</td>
+                <td>OK</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>401</td>
+                <td>Response 401: invalid URL</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>500</td>
+                <td>Response 500: server error</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <button class="btn btn-secondary mt-5" onclick="toggleDecode()">I need to decode a short URL</button>
+      </div>
+
+      <div id="decodeDiv" class="container mt-5" display = "none">
+        <div class="header">
+          <h3>URL Decoder:</h3>
+        </div>
+        <form class="form" id="formDecode">
+          <div  class="form-group w-75">
+          <input
+            type="text"
+            name="idDecode"
+            id="idDecode"
+            value=""
+            placeholder="Paste here your link to be decoded"
+            class="mt-2 mb-2 form-control"
+          />
+        </div>
+          <div class="errorDecode"></div>
+          <button type="submit" class="btn btn-primary">decode this!</button>
+        </form>
+        <div class="link-wrapperDecode mt-2 mb-2">
+          <h5 class="link-text">Your decoded link:</h5>
+        </div>
+        <div class="original-url mb-5"></div>
+        <hr>
+
+        <div class="header"> <h6>For this GET request to the endpoint /decode/:id :</h6></div>
+        <div class="table-responsive">
+          <table class="table table-hover table-sm table-dark ">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Response status</th>
+                <th scope="col">Response message</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>200</td>
+                <td>OK</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>404</td>
+                <td>Response 404. URL not found. Please try with an other one.</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

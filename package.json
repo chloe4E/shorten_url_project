@@ -1,0 +1,24 @@
+{
+  "name": "the-shortest-url-muqzwp",
+  "version": "1.0.0",
+  "description": "Your assignment is to implement a URL shortening service using Node and any framework.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://finn-gmbh-rqjkwe@git.codesubmit.io/finn-gmbh/the-shortest-url-muqzwp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1",
+    "nanoid": "^4.0.0",
+    "url-exist": "^3.0.0"
+  }
+}
