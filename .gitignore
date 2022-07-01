@@ -1,0 +1,3 @@
+.env
+node_modules
+MONGO_DB_URI = "mongodb://localhost:27017/the-shortest-url"
